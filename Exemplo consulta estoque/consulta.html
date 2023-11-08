@@ -1,0 +1,41 @@
+DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div>
+  <h2>Insira o codigo do produto:</h2>
+  <input type="text" id="produtoInput">
+  <button onclick="exibirDados()">Pesquisar</button>
+
+  </br>
+  </br>
+  <h2>dados do produto:</h2>
+<div id="dados do produto"></div>
+
+
+
+
+</div>
+    <script>
+      var  produtos = [
+    { codigo: 1, decriçao: "produto A", quantidade: 10 },
+   { codigo: 2, decriçao: "produto B", quantidade: 5 },
+   { codigo: 3, decriçao: "produto C", quantidade: 8 },
+  ]
+  function exibirDados() {
+var codigo = document.getElementById("produtoInput").
+value;
+ dadosProduto.innerHTML = "EAN: " + (produtos[codigo - 1].codigo)
+ + " - " +
+"Descriçao: " + (produtos[codigo - 1].descriçao) +
+" - " +
+"QDT: " + (produtos[codigo - 1].quantidade);
+
+
+};    
+
+    </script>
+</body>
+
+</html>
