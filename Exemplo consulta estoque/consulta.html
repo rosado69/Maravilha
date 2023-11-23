@@ -1,40 +1,43 @@
-DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
+
 <head>
+    <title>Document</title>
+    <meta charset="UTF-8">
 </head>
+
 <body>
+    <!-- Contem a tela com os campos de entrada de dados e botoes -->
     <div>
-  <h2>Insira o codigo do produto:</h2>
-  <input type="text" id="produtoInput">
-  <button onclick="exibirDados()">Pesquisar</button>
+        <h2>Insira o código do produto:</h2>
+        <input type="text" id="produtoInput">
+        <button onclick="exibirDados()">Pesquisar</button>
+        </br>
+        </br>
+        <h2>Dados do produto:</h2>
+        <div id="dadosProduto"></div>
+    </div>
 
-  </br>
-  </br>
-  <h2>dados do produto:</h2>
-<div id="dados do produto"></div>
-
-
-
-
-</div>
     <script>
-      var  produtos = [
-    { codigo: 1, decriçao: "produto A", quantidade: 10 },
-   { codigo: 2, decriçao: "produto B", quantidade: 5 },
-   { codigo: 3, decriçao: "produto C", quantidade: 8 },
-  ]
-  function exibirDados() {
-var codigo = document.getElementById("produtoInput").
-value;
- dadosProduto.innerHTML = "EAN: " + (produtos[codigo - 1].codigo)
- + " - " +
-"Descriçao: " + (produtos[codigo - 1].descriçao) +
-" - " +
-"QDT: " + (produtos[codigo - 1].quantidade);
+        //simulando um banco de dados utilizando uma array
+        var produtos = [
+            { codigo: 1, descricao: 'Produto A', quantidade: 10 },
+            { codigo: 2, descricao: 'Produto B', quantidade: 5 },
+            { codigo: 3, descricao: 'Produto C', quantidade: 8 },
+        ];
 
+        //Função para listar os dados da array na div com id dadosProduto, listara de acordo com a posição enviada da array e não todos os itens de uma vez
+        function exibirDados() {
+            var codigo = document.getElementById("produtoInput").value;
 
-};    
-
+            dadosProduto.innerHTML =
+                "EAN: " + (produtos[codigo - 1].codigo)
+                + " - " +
+                "Descrição: " + (produtos[codigo - 1].descricao) +
+                " - " +
+                "QTD: " + (produtos[codigo - 1].quantidade);
+        };
     </script>
 </body>
 
